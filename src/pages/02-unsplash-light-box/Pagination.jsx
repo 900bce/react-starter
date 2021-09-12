@@ -8,7 +8,8 @@ const paginationStyle = {
 
 const pageNumStyle = {
   cursor: 'pointer',
-  marginTop: '1rem'
+  marginTop: '1rem',
+  marginRight: '.8rem'
 }
 
 function Pagination({
