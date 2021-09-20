@@ -28,6 +28,9 @@ export default function Home() {
           <li>
             <Link to="/03">Hotel Management</Link>
           </li>
+          <li>
+            <Link to="/04">Shopping Cart</Link>
+          </li>
         </ul>
       </nav>
     </>
