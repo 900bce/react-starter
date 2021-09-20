@@ -1,6 +1,6 @@
 import Home from './Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { SassColorVariables, UnsplashLightBox } from './pages';
+import { SassColorVariables, UnsplashLightBox, HotelManagement } from './pages';
 
 function App() {
   return (
@@ -11,6 +11,9 @@ function App() {
         </Route>
         <Route path="/02">
           <UnsplashLightBox />
+        </Route>
+        <Route path="/03">
+          <HotelManagement />
         </Route>
         <Route path="/">
           <Home />

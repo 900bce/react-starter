@@ -25,6 +25,9 @@ export default function Home() {
           <li>
             <Link to="/02">Unsplash Light Box</Link>
           </li>
+          <li>
+            <Link to="/03">Hotel Management</Link>
+          </li>
         </ul>
       </nav>
     </>
