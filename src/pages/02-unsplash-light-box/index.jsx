@@ -89,8 +89,7 @@ function reducer(state, action) {
 function UnsplashLightBox() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const clientId =
-    'e3e04f2611922e398c2d502a066278f6916f0b6c519bc7173fee959919a7b739';
+  const clientId = process.env.REACT_APP_UNSPLASH_CLIENT_ID;
   const apiUrl = `https://api.unsplash.com/photos?client_id=${clientId}&page=${state.currentPage}&per_page=9`;
   const apiResponse = useFetch({ apiUrl });
 
