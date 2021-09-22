@@ -6,59 +6,6 @@ import Pagination from './Pagination';
 import { ActionTypes } from './action-types';
 import './index.css';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 13rem 7rem 13rem 8.5rem;
-`;
-
-const Title = styled.div`
-  position: relative;
-  font-size: 7.2rem;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  text-decoration: underline;
-  writing-mode: vertical-rl;
-  margin-right: 10rem;
-  text-transform: uppercase;
-  
-  &::before {
-    position: absolute;
-    top: -13rem;
-    left: 0;
-    content: '';
-    width: 90%;
-    height: 1.6rem;
-    background-color: #000;
-  } 
-`;
-
-const PicturesContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 85.5rem;
-  height: 85.5rem;
-`;
-
-const PictureBox = styled.div`
-  margin: 1.5rem;
-  width: 25.5rem;
-  height: 25.5rem;
-  transition: 0.3s;
-
-  &:hover {
-    transform: translate(-0.5rem, -0.5rem);
-    box-shadow: 1.5rem 1.5rem 0 #000;
-    cursor: zoom-in;
-  }
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
 const initialState = {
   currentPage: 1,
   photoList: [],
@@ -181,3 +128,56 @@ function UnsplashLightBox() {
 }
 
 export default UnsplashLightBox;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 13rem 7rem 13rem 8.5rem;
+`;
+
+const Title = styled.div`
+  position: relative;
+  font-size: 7.2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+  writing-mode: vertical-rl;
+  margin-right: 10rem;
+  text-transform: uppercase;
+  
+  &::before {
+    position: absolute;
+    top: -13rem;
+    left: 0;
+    content: '';
+    width: 90%;
+    height: 1.6rem;
+    background-color: #000;
+  } 
+`;
+
+const PicturesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 85.5rem;
+  height: 85.5rem;
+`;
+
+const PictureBox = styled.div`
+  margin: 1.5rem;
+  width: 25.5rem;
+  height: 25.5rem;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translate(-0.5rem, -0.5rem);
+    box-shadow: 1.5rem 1.5rem 0 #000;
+    cursor: zoom-in;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;

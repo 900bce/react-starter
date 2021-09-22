@@ -1,6 +1,52 @@
 import React from 'react';
 import styled from 'styled-components';
 
+function LightBox({
+  isLightBoxOpen,
+  setIsLightBoxOpen,
+  photoList,
+  displayPhotoData,
+  nextPhoto,
+  prevPhoto,
+}) {
+  return (
+    <LightBoxMask>
+      <PhotoInfoWrap>
+        <h3>
+          <span>{photoList.indexOf(displayPhotoData) + 1}</span>/
+          {photoList.length}
+        </h3>
+        <div>
+          <p>{displayPhotoData.alt_description}</p>
+          <span>—</span>
+          <a
+            href={displayPhotoData.user?.links?.html}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {displayPhotoData.user?.username}
+          </a>
+        </div>
+      </PhotoInfoWrap>
+      <PhotoBox>
+        <a href={displayPhotoData.links?.html} target="_blank" rel="noreferrer">
+          <img
+            src={displayPhotoData?.urls?.regular}
+            alt={displayPhotoData.alt_description}
+          />
+        </a>
+        <CloseBtn onClick={() => setIsLightBoxOpen(!isLightBoxOpen)}>
+          &#10005;
+        </CloseBtn>
+        <LeftBtn onClick={prevPhoto}>&#8592;</LeftBtn>
+        <RightBtn onClick={nextPhoto}>&#8594;</RightBtn>
+      </PhotoBox>
+    </LightBoxMask>
+  );
+}
+
+export default LightBox;
+
 const LightBoxMask = styled.div`
   position: fixed;
   top: 0;
@@ -116,49 +162,3 @@ const RightBtn = styled.div`
     background-color: rgba(0, 0, 0, 0.2);
   }
 `;
-
-function LightBox({
-  isLightBoxOpen,
-  setIsLightBoxOpen,
-  photoList,
-  displayPhotoData,
-  nextPhoto,
-  prevPhoto,
-}) {
-  return (
-    <LightBoxMask>
-      <PhotoInfoWrap>
-        <h3>
-          <span>{photoList.indexOf(displayPhotoData) + 1}</span>/
-          {photoList.length}
-        </h3>
-        <div>
-          <p>{displayPhotoData.alt_description}</p>
-          <span>—</span>
-          <a
-            href={displayPhotoData.user?.links?.html}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {displayPhotoData.user?.username}
-          </a>
-        </div>
-      </PhotoInfoWrap>
-      <PhotoBox>
-        <a href={displayPhotoData.links?.html} target="_blank" rel="noreferrer">
-          <img
-            src={displayPhotoData?.urls?.regular}
-            alt={displayPhotoData.alt_description}
-          />
-        </a>
-        <CloseBtn onClick={() => setIsLightBoxOpen(!isLightBoxOpen)}>
-          &#10005;
-        </CloseBtn>
-        <LeftBtn onClick={prevPhoto}>&#8592;</LeftBtn>
-        <RightBtn onClick={nextPhoto}>&#8594;</RightBtn>
-      </PhotoBox>
-    </LightBoxMask>
-  );
-}
-
-export default LightBox;

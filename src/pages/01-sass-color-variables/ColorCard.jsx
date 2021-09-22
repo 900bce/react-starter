@@ -1,5 +1,21 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
+
+function ColorCard({ colorName, colorCode }) {
+  return (
+    <ColorCardBox>
+      <div className="color-display-block" style={{ backgroundColor: colorCode }}></div>
+      <div className="card-bottom">
+        <p className="color-name">{colorName}</p>
+        <p className="color-code">{colorCode}</p>
+      </div>
+
+    </ColorCardBox>
+  )
+}
+
+export default ColorCard;
+
 
 const ColorCardBox = styled.div`
   width: 30%;
@@ -30,18 +46,3 @@ const ColorCardBox = styled.div`
     color: #777;
   }
 `;
-
-function ColorCard({ colorName, colorCode }) {
-  return (
-    <ColorCardBox>
-      <div className="color-display-block" style={{ backgroundColor: colorCode }}></div>
-      <div className="card-bottom">
-        <p className="color-name">{colorName}</p>
-        <p className="color-code">{colorCode}</p>
-      </div>
-
-    </ColorCardBox>
-  )
-}
-
-export default ColorCard
