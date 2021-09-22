@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-starter/static/css/main.0c4b1d71.chunk.css",
+    "main.css": "/react-starter/static/css/main.eb1d0aee.chunk.css",
     "main.js": "/react-starter/static/js/main.bbcacdb2.chunk.js",
     "main.js.map": "/react-starter/static/js/main.bbcacdb2.chunk.js.map",
     "runtime-main.js": "/react-starter/static/js/runtime-main.7fe0f5b8.js",
@@ -8,13 +8,13 @@
     "static/js/2.1cf22b4c.chunk.js": "/react-starter/static/js/2.1cf22b4c.chunk.js",
     "static/js/2.1cf22b4c.chunk.js.map": "/react-starter/static/js/2.1cf22b4c.chunk.js.map",
     "index.html": "/react-starter/index.html",
-    "static/css/main.0c4b1d71.chunk.css.map": "/react-starter/static/css/main.0c4b1d71.chunk.css.map",
+    "static/css/main.eb1d0aee.chunk.css.map": "/react-starter/static/css/main.eb1d0aee.chunk.css.map",
     "static/js/2.1cf22b4c.chunk.js.LICENSE.txt": "/react-starter/static/js/2.1cf22b4c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7fe0f5b8.js",
     "static/js/2.1cf22b4c.chunk.js",
-    "static/css/main.0c4b1d71.chunk.css",
+    "static/css/main.eb1d0aee.chunk.css",
     "static/js/main.bbcacdb2.chunk.js"
   ]
 }
