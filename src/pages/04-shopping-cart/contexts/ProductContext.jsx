@@ -6,22 +6,6 @@ import {
 } from 'react';
 import { storedProducts } from '../products';
 
-// const initialState = {
-//   products: [],
-//   detailProduct: {},
-//   isModalOpen: false,
-//   cart: {},
-//   cartTotal: 0,
-//   addToCart: () => {},
-//   handleDetail: () => {},
-//   openModal: () => {},
-//   closeModal: () => {},
-//   cartIncrement: () => {},
-//   cartDecrement: () => {},
-//   removeItem: () => {},
-// };
-
-// const ProductContext = createContext(initialState);
 const ProductContext = createContext({});
 
 const ProductProvider = (props) => {

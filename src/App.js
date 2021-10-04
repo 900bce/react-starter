@@ -11,21 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/01">
-          <SassColorVariables />
-        </Route>
-        <Route path="/02">
-          <UnsplashLightBox />
-        </Route>
-        <Route path="/03">
-          <HotelManagement />
-        </Route>
-        <Route path="/04">
-          <Shopping />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/01" component={SassColorVariables} />
+        <Route path="/02" component={UnsplashLightBox} />
+        <Route path="/03" component={HotelManagement} />
+        <Route path="/04" component={Shopping} />
+        <Route path="/" component={Home} />
       </Switch>
     </BrowserRouter>
   );
