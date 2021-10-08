@@ -5,8 +5,8 @@ const RoomContext = createContext({});
 
 const RoomProvider = (props) => {
   const [rooms, setRooms] = useState([]);
-  const [discount, setDiscount] = useState(0);
-  const [serviceFee, setServiceFee] = useState(0);
+  const [discount, setDiscount] = useState(0.9);
+  const [serviceFee, setServiceFee] = useState(150);
 
   useEffect(() => {
     setRooms(storedRooms);

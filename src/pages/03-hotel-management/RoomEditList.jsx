@@ -7,7 +7,13 @@ function RoomEditList() {
 
   const roomList = [...rooms];
 
-  return roomList.map((room) => <RoomEditCard key={room.id} room={room} />);
+  return (
+    <div>
+      {roomList.map((room, index) => (
+        <RoomEditCard key={room.id} room={room} index={index} />
+      ))}
+    </div>
+  );
 }
 
 export default RoomEditList;

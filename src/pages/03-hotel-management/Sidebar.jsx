@@ -9,26 +9,30 @@ function Sidebar() {
   return (
     <SideBar>
       <h2 className="header">房間資訊</h2>
-      <div>
-        <label>總折數</label>
+      <div className="discount">
+        <label>總折扣</label>
         <br />
         <input
           type="number"
           value={discount}
-          onChange={(e) => setDiscount(e.target.value)}
+          min="0"
+          max="1"
+          onChange={(e) => setDiscount(+e.target.value)}
+          onBlur={(e) => {
+            if (+e.target.value > 1) {
+              setDiscount(1);
+            }
+          }}
         />
       </div>
-      <div>
+      <div className="service-fee">
         <label>服務費</label>
         <br />
         <input
           type="number"
           value={serviceFee}
-          onChange={(e) => setServiceFee(e.target.value)}
+          onChange={(e) => setServiceFee(+e.target.value)}
         />
-      </div>
-      <div>
-        <label>活動</label>
       </div>
       <div className="sidebar-content">
         <div className="sidebar-content-title">
@@ -46,9 +50,25 @@ const SideBar = styled.div`
   padding: 0 1.5rem;
   background-color: #fafafa;
 
+  .discount,
+  .service-fee,
+  .event {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+
+    & > input {
+      padding: 3px 5px;
+      font-size: 1.4rem;
+      width: 60%;
+    }
+  }
+
   .sidebar-content-title {
     padding: 1rem 0;
     border-bottom: 1px solid rgb(220, 220, 220);
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 `;
 
