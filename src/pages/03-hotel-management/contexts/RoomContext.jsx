@@ -8,6 +8,10 @@ const RoomProvider = (props) => {
   const [discount, setDiscount] = useState(0.9);
   const [serviceFee, setServiceFee] = useState(150);
 
+  const removeRoom = (roomId) => {
+    setRooms((rooms) => rooms.filter((room) => room.id !== roomId));
+  };
+
   useEffect(() => {
     setRooms(storedRooms);
   }, []);
@@ -21,6 +25,7 @@ const RoomProvider = (props) => {
         setRooms,
         setDiscount,
         setServiceFee,
+        removeRoom,
       }}>
       {props.children}
     </RoomContext.Provider>

@@ -5,7 +5,7 @@ import { roomTypes } from './room';
 import styled from 'styled-components';
 
 function RoomEditCard({ room, index }) {
-  const { rooms, setRooms } = useRoom();
+  const { rooms, setRooms, removeRoom } = useRoom();
   const [currentRoom, setCurrentRoom] = useState(room);
   const [isContentDisplay, setIsContentDisplay] = useState(false);
 
@@ -47,8 +47,11 @@ function RoomEditCard({ room, index }) {
       <div
         className="card-header"
         onClick={() => setIsContentDisplay(!isContentDisplay)}>
-        {`${index + 1} `}
-        {roomTypes[room.type]}
+        <span>
+          {`${index + 1} `}
+          {roomTypes[room.type]}
+        </span>
+        <button onClick={() => removeRoom(room.id)}>&#215;</button>
       </div>
       {isContentDisplay && (
         <div className="card-content">
@@ -166,13 +169,28 @@ export default RoomEditCard;
 
 const EditCard = styled.div`
   margin-bottom: 1rem;
+
   .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 0.5rem 0.8rem;
     font-size: 1.4rem;
     border: 1px solid rgba(128, 128, 128, 0.5);
     border-left: 3px solid rgba(128, 128, 128, 0.5);
     cursor: pointer;
+
+    button {
+      border: none;
+      background: transparent;
+      color: #777;
+      font-size: 2rem;
+
+      &:hover {
+        color: #ccc;
+      }
+    }
   }
 
   .card-content {

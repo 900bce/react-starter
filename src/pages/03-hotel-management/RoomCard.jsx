@@ -4,7 +4,7 @@ import { useRoom } from './contexts/RoomContext';
 import { facilityType, roomTypes } from './room';
 
 function RoomCard({ room }) {
-  const { discount, serviceFee } = useRoom();
+  const { discount, serviceFee, removeRoom } = useRoom();
 
   return (
     <RoomCardWrap>
@@ -12,6 +12,9 @@ function RoomCard({ room }) {
         className="card-header"
         style={{ backgroundImage: `url(${room.roomPicUrl})` }}>
         <div className="room-type">{roomTypes[room.type]}</div>
+        <button className="delete-btn" onClick={() => removeRoom(room.id)}>
+          &#215;
+        </button>
       </div>
       <div className="card-content">
         <h3 className="room-name">{roomTypes[room.type]}</h3>
@@ -41,6 +44,11 @@ const RoomCardWrap = styled.div`
   min-width: 20rem;
   margin: 1.5rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   .card-header {
     position: relative;
@@ -59,6 +67,21 @@ const RoomCardWrap = styled.div`
     padding: 0.5rem 2rem;
     font-size: 1.5rem;
     color: #000;
+  }
+
+  .delete-btn {
+    position: absolute;
+    right: 1rem;
+    top: 0.3rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+
+    &:hover {
+      color: #aaa;
+    }
   }
 
   .card-content {
