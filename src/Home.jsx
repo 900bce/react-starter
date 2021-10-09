@@ -7,16 +7,16 @@ export default function Home() {
       <nav style={navStyle}>
         <ul>
           <li>
-            <Link to="/react-starter/01">Sass Color Variables</Link>
+            <Link to="/01">Sass Color Variables</Link>
           </li>
           <li>
-            <Link to="/react-starter/02">Unsplash Light Box</Link>
+            <Link to="/02">Unsplash Light Box</Link>
           </li>
           <li>
-            <Link to="/react-starter/03">Hotel Management</Link>
+            <Link to="/03">Hotel Management</Link>
           </li>
           <li>
-            <Link to="/react-starter/04">Shopping Cart</Link>
+            <Link to="/04">Shopping Cart</Link>
           </li>
         </ul>
       </nav>

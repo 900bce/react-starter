@@ -11,11 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/react-starter/01" component={SassColorVariables} />
-        <Route path="/react-starter/02" component={UnsplashLightBox} />
-        <Route path="/react-starter/03" component={HotelManagement} />
-        <Route path="/react-starter/04" component={Shopping} />
-        <Route path="/react-starter" component={Home} />
+        <Route path="/01" component={SassColorVariables} />
+        <Route path="/02" component={UnsplashLightBox} />
+        <Route path="/03" component={HotelManagement} />
+        <Route path="/04" component={Shopping} />
+        <Route path="/" component={Home} />
       </Switch>
     </BrowserRouter>
   );
